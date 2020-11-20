@@ -15,11 +15,11 @@ import webbrowser
 # @st.cache(allow_output_mutation=True)
 
 def app():
-    st.header('SEGUIMIENTO DE PQR - COMFAORIENTE')
+    st.header('ESTADO GENERAL DE LAS PQR')
 #     st.subheader("Listado de PQR")
-    connection = pymysql.connect(host='190.8.176.224',
-                                user='medico',
-                                password='J5n463gb*',
+    connection = pymysql.connect(host='107.180.43.4',
+                                user='medico_web',
+                                password='Medicontrol123*',
                                 db='medico_rozzys',
                                 cursorclass=pymysql.cursors.DictCursor)
     cursor = connection.cursor()
@@ -29,7 +29,6 @@ def app():
     result = cursor.fetchone()
     connection.close()
     
-    df['eps']=df['eps'].str.replace('COMFAORIENTE EPS','COMFAORIENTE')
     df["motivo"][df['descripcion'].str.contains("medicamento")] = "MEDICAMENTOS"
     df["motivo"][df['descripcion'].str.contains("medicamentos")] = "MEDICAMENTOS"
     df["motivo"][df['descripcion'].str.contains("pastilla")] = "MEDICAMENTOS"
