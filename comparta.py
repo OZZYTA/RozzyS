@@ -51,6 +51,7 @@ def app():
     df['mes']=df['mes'].str.replace("10", "Octubre")
     df['mes']=df['mes'].str.replace("11", "Noviembre")
     df['mes']=df['mes'].str.replace("12", "Diciembre")
+    df['eps']=df['eps'].str.replace('COMPARTA EPS','MEDIMAS')
     dfcomparta=df[(df['eps'] == "COMPARTA")]
     full=len(dfcomparta)
     st.write("Al día de hoy, Medicontrol SAS ha recibido en total ",full," PQRs enviadas directamente por las EPS Comparta, las mismas han sido solicitadas con el fin de hacer seguimiento y vigilancia al comportamiento resolutivo de cada uno de las Peticiones, Quejas o Reclamos de los usuarios por partes de la EAPB.")
