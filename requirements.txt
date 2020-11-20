@@ -1,0 +1,8 @@
+pymysql
+matplotlib
+datetime
+pandas
+numpy
+plotly
+streamlit==0.69.2
+
