@@ -15,7 +15,7 @@ import webbrowser
 # @st.cache(allow_output_mutation=True)
 
 def app():
-    st.header('ESTADO GENERAL DE LAS PQR')
+    st.header('SEGUIMIENTO DE PQR - NUEVA EPS')
 #     st.subheader("Listado de PQR")
     connection = pymysql.connect(host='107.180.43.4',
                                 user='medico_web',
