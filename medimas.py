@@ -8,7 +8,6 @@ import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 from plotly.subplots import make_subplots
 import datetime
-import webbrowser
 
 
 # @st.cache(suppress_st_warning=True)
@@ -117,7 +116,5 @@ def app():
     st.plotly_chart(fig5, use_container_width=True)
     
     st.write("Si desea consultar el detalle de cada PQR, por favor ingrese al aplicativo RozzyS con su nombre de usuario y contraseña.")
-    url = 'http://medicontrolsas.com/RozzyS/'
-    if st.button('Abrir RozzyS'):
-        webbrowser.open_new_tab(url)
-  
+    link = '[RozzyS](http://rozzys.medicontrolsas.com)'
+    st.markdown(link, unsafe_allow_html=True)
